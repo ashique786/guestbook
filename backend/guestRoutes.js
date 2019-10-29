@@ -20,7 +20,7 @@ mongoose.connect(db_url, (err) => {
 })
 app.get('/home', (req, res) => {
     res.json('Great, you have done it !!');
-    console.log('Great, you have done it !!')
+    console.log('Great, you have done it !')
 });
 
 app.get('/guestbook', (req, res) => {
