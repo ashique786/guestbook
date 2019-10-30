@@ -6,6 +6,7 @@ const parseurl = require('parseurl');
 const path = require('path');
 const dbr = process.env.MONGOLAB_URI;
 
+const db = require('../config/keys').mongoURI;
 //const db_url = process.env.MONGOLAB_URI ;
 const Signature = require('./GuestSignatures');
 const app = express();
@@ -13,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 mongoose
-    .connect(dbr)
+    .connect(db)
     .then(() => {
         console.log(' Hey Ashique MOngoDB connected')
     })
