@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const parseurl = require('parseurl');
 const path = require('path');
-const dbr = 'mongodb://ashique:surface313@ds239928.mlab.com:39928/guestbook';
+const dbr = process.env.MONGOLAB_URI;
+
 //const db_url = process.env.MONGOLAB_URI ;
 const Signature = require('./GuestSignatures');
 const app = express();
@@ -43,5 +44,5 @@ app.post('/createSignature', (req, res) => {
         .catch(err => console.log(err))
 })
 
-app.listen(6000);
+app.listen(process.env.PORT || 6000);
 
