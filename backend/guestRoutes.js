@@ -19,7 +19,7 @@ mongoose
     .catch((err) => {
         console.log(err)
     });
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.json('Great, you have done it !!');
     console.log('Great, you have done it !')
 });
