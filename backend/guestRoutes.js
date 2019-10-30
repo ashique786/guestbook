@@ -6,7 +6,7 @@ const parseurl = require('parseurl');
 const path = require('path');
 const dbr = process.env.MONGOLAB_URI;
 
-const db = require('../backend/keys').mongoURI;
+const db = require('./keys').mongoURI;
 //const db_url = process.env.MONGOLAB_URI ;
 const Signature = require('./GuestSignatures');
 const app = express();
