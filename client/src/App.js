@@ -24,7 +24,7 @@ export default class App extends Component {
       guestName: event.target.value,
       guestMessage: event.target.value
     })
-    Axios.post('https://peaceful-castle-94710.herokuapp.com/createSignature', {
+    Axios.post('https://peaceful-castle-94710.herokuapp.com', {
       guestName: this.state.guestName,
       guestMessage:this.state.guestMessage,
     }).then((result) => {
@@ -77,7 +77,7 @@ export class GuestName  extends Component {
   }
 
   componentDidMount() {
-    fetch('https://peaceful-castle-94710.herokuapp.com/guestbook')
+    fetch('https://peaceful-castle-94710.herokuapp.com/')
     .then(results => {
       return results.json();})
      .then(data =>{this.setState({messages:data})});
