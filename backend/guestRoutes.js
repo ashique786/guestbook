@@ -4,10 +4,9 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const parseurl = require('parseurl');
 const path = require('path');
-const dbr = process.env.MONGOLAB_URI;
 
 const db = require('./keys').mongoURI;
-//const db_url = process.env.MONGOLAB_URI ;
+
 const Signature = require('./GuestSignatures');
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
