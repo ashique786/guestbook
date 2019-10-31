@@ -77,7 +77,7 @@ export class GuestName  extends Component {
   }
 
   componentDidMount() {
-    fetch('https://peaceful-castle-94710.herokuapp.com/')
+    fetch('https://peaceful-castle-94710.herokuapp.com')
     .then(results => {
       return results.json();})
      .then(data =>{this.setState({messages:data})});
