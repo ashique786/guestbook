@@ -62,12 +62,13 @@ export default class App extends Component {
               >
             Submit to Guestbook<i className="GuestBookButton2" aria-hidden="true" />
             </button>
+            <GuestName />
       </div>
     )
   }
 }
 
-export class GuestName  extends Component {
+ class GuestName  extends Component {
   constructor(props){
     super(props);
     this.state = {
